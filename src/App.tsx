@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Routes/Home";
 import Search from "./Routes/Search";
@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
+      <Switch>
         <Route path="/">
           <Home />
         </Route>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/search">
           <Search />
         </Route>
-      </Routes>
+      </Switch>
     </Router>
   );
 }
