@@ -5,3 +5,4 @@
 - React Router DOM
 - React Hook Form
 - Typescript
+- Framer Motion
