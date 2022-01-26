@@ -98,6 +98,7 @@ const boxVariants = {
   hover: {
     scale: 1.3,
     y: -80,
+    // hover의 transition만 따로 지정해줄수 있다.
     transition: {
       delay: 0.5,
       duaration: 0.1,
@@ -171,6 +172,7 @@ function Home() {
                       transition={{ type: "tween" }}
                       bgPhoto={makeImagePath(movie.backdrop_path, "w500")}
                     >
+                      {/* Info에 variants를 넣어주지 않으면 자동으로 부모 컴퍼넌트인 Box의 variants가 상속되어 적용된다. */}
                       <Info variants={infoVariants}>
                         <h4>{movie.title}</h4>
                       </Info>
